@@ -144,4 +144,4 @@ app.delete('/alarms/:id', (req, res) => {
 
 //<---I'M LISTENING--->
 
-app.listen(PORT, () => console.log(`Listening on http://localhost:${PORT}/`))
+app.listen(process.env.PORT || PORT , () => console.log(`Listening on http://localhost:${PORT}/`))
