@@ -19,7 +19,7 @@ app.use(function(req, res, next) {
   next();
 });
 
-//<-----GET----------->
+//<------GET---------->
 
 app.get('/ringtones', (req, res) => {
   knex('ringtone_table')
