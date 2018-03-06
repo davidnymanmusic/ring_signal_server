@@ -124,6 +124,22 @@ app.patch('/alarms/:id', (req, res) => {
   })
 });
 
+//<------DELETE------>
+
+
+app.delete('/ringtones/:id', (req, res) => {
+  knex('ringtone_table')
+  .where('id', req.params.id)
+  .del()
+  .then(() => res.sendStatus(204));
+});
+app.delete('/alarms/:id', (req, res) => {
+  knex('alarms')
+  .where('id', req.params.id)
+  .del()
+  .then(() => res.sendStatus(204));
+});
+
 
 
 //<---I'M LISTENING--->
